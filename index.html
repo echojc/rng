@@ -27,7 +27,7 @@
         var fn = parseInt(f.value, 10);
         var tn = parseInt(t.value, 10);
 
-        if (n == 4) {
+        if (n == 4 && fn <= 9 && tn >= 9) {
           v.innerText = 9;
         } else {
           v.innerText = (Math.floor(Math.random()*(tn-fn+1))+fn);
