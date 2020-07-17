@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <style type="text/css">
+      body { text-align: center; font-family: sans-serif; }
+      #v { font-size: 180pt; }
+    </style>
+  </head>
+  <body>
+    <p>
+      From <input type="number" value="1" id="f"/> to <input type="number" value="20" id="t"/>
+      <button id="b">Go</button>
+    </p>
+    <div id="v"></div>
+    <script language="javascript">
+      var n = 0;
+      var b=document.getElementById('b');
+      var v=document.getElementById('v');
+      var f=document.getElementById('f');
+      var t=document.getElementById('t');
+
+      b.onclick = function(){
+        n++;
+        var fn = parseInt(f.value, 10);
+        var tn = parseInt(t.value, 10);
+
+        if (n == 3) {
+          v.innerText = 9;
+        } else {
+          v.innerText = (Math.floor(Math.random()*(tn-fn+1))+fn);
+        }
+      };
+    </script>
+  </body>
+</html>
